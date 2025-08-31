@@ -47,7 +47,7 @@ const Home = () => {
               JylsTheProducer
             </p>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-8">
-              Dark beats with metal soul. Crafting fire tracks in Trap, Afrobeat, and Drill with that signature red & black aesthetic.
+              Beats sombres avec une âme de métal. Je crée des tracks de feu en Trap, Afrobeat et Drill avec cette esthétique rouge et noir signature.
             </p>
           </motion.div>
 
@@ -63,7 +63,7 @@ const Home = () => {
                 className="bg-gradient-fire hover:scale-105 transition-transform glow-red text-lg px-8 py-3"
               >
                 <Music className="w-5 h-5 mr-2" />
-                Browse Beats
+                Explorer les Beats
               </Button>
             </Link>
             <Link to="/contact">
@@ -73,7 +73,7 @@ const Home = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all text-lg px-8 py-3"
               >
                 <Download className="w-5 h-5 mr-2" />
-                Get Custom Beat
+                Beat Sur Mesure
               </Button>
             </Link>
           </motion.div>
@@ -91,10 +91,10 @@ const Home = () => {
             className="text-center mb-12"
           >
             <h2 className="font-metal text-4xl md:text-5xl text-primary text-glow mb-4">
-              Featured Beats
+              Beats en Vedette
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get a taste of the 241 PRODUCER sound. Dark, heavy, and unforgettable.
+              Découvre le son signature de 241 PRODUCER. Sombre, lourd et inoubliable.
             </p>
           </motion.div>
 
@@ -129,7 +129,7 @@ const Home = () => {
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
               >
-                View All Beats
+                Voir Tous les Beats
               </Button>
             </Link>
           </motion.div>
@@ -146,18 +146,18 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-metal text-3xl md:text-4xl text-primary text-glow mb-6">
-              Ready to Make Music?
+              Prêt à Faire de la Musique ?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Connect with 241 PRODUCER for custom beats, collaborations, or licensing. 
-              Let's create something dark and powerful together.
+              Connecte-toi avec 241 PRODUCER pour des beats sur mesure, des collaborations ou des licences. 
+              Créons ensemble quelque chose de sombre et puissant.
             </p>
             <Link to="/contact">
               <Button 
                 size="lg" 
                 className="bg-gradient-fire hover:scale-105 transition-transform glow-red text-lg px-8 py-3"
               >
-                Get In Touch
+                Prendre Contact
               </Button>
             </Link>
           </motion.div>

@@ -7,10 +7,10 @@ import ParticleBackground from '@/components/layout/ParticleBackground';
 
 const About = () => {
   const stats = [
-    { icon: Music, label: "Beats Produced", value: "500+" },
-    { icon: Users, label: "Artists Collaborated", value: "50+" },
-    { icon: Award, label: "Years Experience", value: "5+" },
-    { icon: Headphones, label: "Hours in Studio", value: "2000+" }
+    { icon: Music, label: "Beats Produits", value: "500+" },
+    { icon: Users, label: "Artistes Collaborateurs", value: "50+" },
+    { icon: Award, label: "Années d'Expérience", value: "5+" },
+    { icon: Headphones, label: "Heures en Studio", value: "2000+" }
   ];
 
   const influences = [
@@ -21,18 +21,18 @@ const About = () => {
   const services = [
     {
       icon: Music,
-      title: "Beat Production",
-      description: "Custom beats in Trap, Drill, Afrobeat, and Hip-Hop with that signature dark aesthetic."
+      title: "Production de Beats",
+      description: "Beats personnalisés en Trap, Drill, Afrobeat et Hip-Hop avec cette esthétique sombre signature."
     },
     {
       icon: Mic,
-      title: "Mixing & Mastering",
-      description: "Professional mixing and mastering services to make your tracks sound industry-ready."
+      title: "Mixage & Mastering",
+      description: "Services professionnels de mixage et mastering pour rendre tes tracks prêtes pour l'industrie."
     },
     {
       icon: Zap,
       title: "Collaborations",
-      description: "Open to working with artists, producers, and labels for exciting new projects."
+      description: "Ouvert au travail avec des artistes, producteurs et labels pour de nouveaux projets excitants."
     }
   ];
 
@@ -49,10 +49,10 @@ const About = () => {
           className="text-center mb-16"
         >
           <h1 className="font-metal text-5xl md:text-6xl text-primary text-glow mb-4">
-            About 241 PRODUCER
+            À Propos de 241 PRODUCER
           </h1>
           <p className="text-xl text-muted-foreground">
-            JylsTheProducer • The Dark Side of Sound
+            JylsTheProducer • Le Côté Sombre du Son
           </p>
         </motion.div>
 
@@ -65,29 +65,29 @@ const About = () => {
         >
           <Card className="bg-card border-border">
             <CardContent className="p-8">
-              <h2 className="font-metal text-3xl text-primary mb-6">The Journey</h2>
+              <h2 className="font-metal text-3xl text-primary mb-6">Le Parcours</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
-                  Welcome to the dark side of sound. I'm JylsTheProducer, known in the streets as 
+                  Bienvenue dans le côté sombre du son. Je suis JylsTheProducer, connu dans la rue sous le nom de 
                   <span className="text-primary font-semibold"> 241 PRODUCER</span>. 
-                  My journey began in the shadows, crafting beats that blend the raw energy of metal 
-                  with the urban pulse of modern hip-hop.
+                  Mon voyage a commencé dans l&apos;ombre, créant des beats qui mélangent l&apos;énergie brute du métal 
+                  avec le pouls urbain du hip-hop moderne.
                 </p>
                 <p>
-                  Growing up surrounded by both metal and hip-hop culture, I developed a unique perspective 
-                  on music production. My signature sound combines heavy, distorted elements with crisp, 
-                  modern production techniques - creating beats that hit different.
+                  Ayant grandi entouré par la culture métal et hip-hop, j&apos;ai développé une perspective unique 
+                  sur la production musicale. Mon son signature combine des éléments lourds et distordus avec 
+                  des techniques de production modernes et nettes - créant des beats qui frappent différemment.
                 </p>
                 <p>
-                  Every beat I produce carries that signature red and black aesthetic - dark, powerful, 
-                  and unapologetically raw. Whether it's a hard-hitting trap beat, an afrobeat with 
-                  metal undertones, or a drill track that cuts deep, my goal is to create music 
-                  that moves both body and soul.
+                  Chaque beat que je produis porte cette esthétique rouge et noir signature - sombre, puissante, 
+                  et sans compromis. Que ce soit un beat trap percutant, un afrobeat avec des nuances de métal, 
+                  ou une track drill qui coupe profond, mon objectif est de créer de la musique 
+                  qui bouge à la fois le corps et l&apos;âme.
                 </p>
                 <p>
-                  The name "241" represents the duality in my music - the balance between darkness 
-                  and light, aggression and melody, tradition and innovation. It's this contrast 
-                  that makes each track unique and unforgettable.
+                  Le nom "241" représente la dualité dans ma musique - l&apos;équilibre entre l&apos;obscurité 
+                  et la lumière, l&apos;agression et la mélodie, la tradition et l&apos;innovation. C&apos;est ce contraste 
+                  qui rend chaque track unique et inoubliable.
                 </p>
               </div>
             </CardContent>
@@ -162,7 +162,7 @@ const About = () => {
           <Card className="bg-card border-border">
             <CardContent className="p-8">
               <h2 className="font-metal text-3xl text-primary text-glow text-center mb-8">
-                Musical Influences
+                Influences Musicales
               </h2>
               <div className="flex flex-wrap justify-center gap-3">
                 {influences.map((influence, index) => (
@@ -194,10 +194,10 @@ const About = () => {
           <Card className="bg-gradient-dark border-border">
             <CardContent className="p-12">
               <h2 className="font-metal text-3xl text-primary text-glow mb-6">
-                Ready to Create Something Dark & Powerful?
+                Prêt à Créer Quelque Chose de Sombre et Puissant ?
               </h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Let's collaborate and bring your vision to life with that signature 241 PRODUCER sound.
+                Collaborons et donnons vie à ta vision avec ce son signature de 241 PRODUCER.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/beats">
@@ -206,7 +206,7 @@ const About = () => {
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   >
-                    Browse Beats
+                    Explorer les Beats
                   </Button>
                 </Link>
                 <Link to="/contact">
@@ -214,7 +214,7 @@ const About = () => {
                     size="lg" 
                     className="bg-gradient-fire hover:scale-105 transition-transform glow-red"
                   >
-                    Work With Me
+                    Travailler Avec Moi
                   </Button>
                 </Link>
               </div>

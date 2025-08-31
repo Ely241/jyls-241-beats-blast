@@ -9,71 +9,71 @@ import ParticleBackground from '@/components/layout/ParticleBackground';
 
 const Beats = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedGenre, setSelectedGenre] = useState('All');
+  const [selectedGenre, setSelectedGenre] = useState('Tous');
 
-  const genres = ['All', 'Trap', 'Afrobeat', 'Drill', 'Hip-Hop', 'Dark'];
+  const genres = ['Tous', 'Trap', 'Afrobeat', 'Drill', 'Hip-Hop', 'Sombre'];
 
   const beats = [
     {
-      title: "Crimson Shadows",
+      title: "Ombres Pourpres",
       genre: "Trap",
       bpm: 140,
       duration: "3:45",
       audioSrc: "https://www.soundjay.com/misc/sounds/waterdrip.mp3",
-      price: "$25",
-      tags: ["Dark", "Heavy", "Atmospheric"]
+      price: "25€",
+      tags: ["Sombre", "Lourd", "Atmosphérique"]
     },
     {
-      title: "Blood Moon",
+      title: "Lune de Sang",
       genre: "Drill",
       bpm: 150,
       duration: "2:58",
       audioSrc: "https://www.soundjay.com/misc/sounds/waterdrip.mp3",
-      price: "$30",
-      tags: ["Aggressive", "Dark", "UK Drill"]
+      price: "30€",
+      tags: ["Agressif", "Sombre", "UK Drill"]
     },
     {
-      title: "Inferno Vibes",
+      title: "Vibes Inferno",
       genre: "Afrobeat",
       bpm: 120,
       duration: "4:12",
       audioSrc: "https://www.soundjay.com/misc/sounds/waterdrip.mp3",
-      price: "$20",
-      tags: ["Groovy", "Fire", "Cultural"]
+      price: "20€",
+      tags: ["Groovy", "Feu", "Culturel"]
     },
     {
-      title: "Midnight Chaos",
+      title: "Chaos de Minuit",
       genre: "Trap",
       bpm: 145,
       duration: "3:30",
       audioSrc: "https://www.soundjay.com/misc/sounds/waterdrip.mp3",
-      price: "$25",
-      tags: ["Dark", "Experimental", "Bass"]
+      price: "25€",
+      tags: ["Sombre", "Expérimental", "Bass"]
     },
     {
-      title: "Steel Thunder",
+      title: "Tonnerre d\"Acier",
       genre: "Hip-Hop",
       bpm: 95,
       duration: "4:05",
       audioSrc: "https://www.soundjay.com/misc/sounds/waterdrip.mp3",
-      price: "$35",
-      tags: ["Metal", "Hard", "Boom Bap"]
+      price: "35€",
+      tags: ["Métal", "Dur", "Boom Bap"]
     },
     {
-      title: "Scarlet Rush",
+      title: "Rush Écarlate",
       genre: "Drill",
       bpm: 155,
       duration: "2:45",
       audioSrc: "https://www.soundjay.com/misc/sounds/waterdrip.mp3",
-      price: "$30",
-      tags: ["Fast", "Aggressive", "Red"]
+      price: "30€",
+      tags: ["Rapide", "Agressif", "Rouge"]
     }
   ];
 
   const filteredBeats = beats.filter(beat => {
     const matchesSearch = beat.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          beat.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesGenre = selectedGenre === 'All' || beat.genre === selectedGenre;
+    const matchesGenre = selectedGenre === 'Tous' || beat.genre === selectedGenre;
     return matchesSearch && matchesGenre;
   });
 
@@ -90,10 +90,10 @@ const Beats = () => {
           className="text-center mb-12"
         >
           <h1 className="font-metal text-5xl md:text-6xl text-primary text-glow mb-4">
-            Beat Library
+            Bibliothèque de Beats
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Dive into the dark side of sound. Premium beats crafted with metal soul and urban fire.
+            Plonge dans le côté sombre du son. Beats premium créés avec une âme de métal et un feu urbain.
           </p>
         </motion.div>
 
@@ -107,7 +107,7 @@ const Beats = () => {
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
             <Input
-              placeholder="Search beats, tags..."
+              placeholder="Rechercher beats, tags..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10 bg-card border-border focus:border-primary"
@@ -144,7 +144,7 @@ const Beats = () => {
         >
           <Music2 className="w-5 h-5 text-primary" />
           <span className="text-foreground">
-            {filteredBeats.length} beat{filteredBeats.length !== 1 ? 's' : ''} found
+            {filteredBeats.length} beat{filteredBeats.length !== 1 ? 's' : ''} trouvé{filteredBeats.length !== 1 ? 's' : ''}
           </span>
         </motion.div>
 
@@ -172,19 +172,19 @@ const Beats = () => {
           >
             <Music2 className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
             <h3 className="font-metal text-2xl text-muted-foreground mb-2">
-              No beats found
+              Aucun beat trouvé
             </h3>
             <p className="text-muted-foreground mb-6">
-              Try adjusting your search or filter criteria
+              Essaie d&apos;ajuster tes critères de recherche ou de filtre
             </p>
             <Button 
               onClick={() => {
                 setSearchTerm('');
-                setSelectedGenre('All');
+                setSelectedGenre('Tous');
               }}
               variant="outline"
             >
-              Clear Filters
+              Effacer les Filtres
             </Button>
           </motion.div>
         )}
@@ -198,16 +198,16 @@ const Beats = () => {
           className="mt-20 text-center bg-card border border-border rounded-lg p-8"
         >
           <h3 className="font-metal text-3xl text-primary text-glow mb-4">
-            Need Something Custom?
+            Besoin de Quelque Chose Sur Mesure ?
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Can't find exactly what you're looking for? Let's create a custom beat that perfectly matches your vision.
+            Tu ne trouves pas exactement ce que tu cherches ? Créons un beat personnalisé qui correspond parfaitement à ta vision.
           </p>
           <Button 
             size="lg" 
             className="bg-gradient-fire hover:scale-105 transition-transform glow-red"
           >
-            Request Custom Beat
+            Demander un Beat Sur Mesure
           </Button>
         </motion.div>
       </div>

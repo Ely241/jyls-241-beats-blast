@@ -30,17 +30,17 @@ const Contact = () => {
   const { toast } = useToast();
 
   const projectTypes = [
-    { id: 'beat-lease', label: 'Beat Lease', icon: Music },
-    { id: 'custom-beat', label: 'Custom Beat', icon: Headphones },
-    { id: 'mixing-mastering', label: 'Mixing & Mastering', icon: Music },
+    { id: 'beat-lease', label: 'Licence Beat', icon: Music },
+    { id: 'custom-beat', label: 'Beat Sur Mesure', icon: Headphones },
+    { id: 'mixing-mastering', label: 'Mixage & Mastering', icon: Music },
     { id: 'collaboration', label: 'Collaboration', icon: MessageCircle },
   ];
 
   const pricingInfo = [
-    { type: 'Beat Lease', price: '$20-35', description: 'MP3 + WAV files' },
-    { type: 'Exclusive Rights', price: '$200-500', description: 'Full ownership + stems' },
-    { type: 'Custom Beat', price: '$150-300', description: 'Made to order' },
-    { type: 'Mixing & Mastering', price: '$50-100', description: 'Professional polish' },
+    { type: 'Licence Beat', price: '20-35€', description: 'Fichiers MP3 + WAV' },
+    { type: 'Droits Exclusifs', price: '200-500€', description: 'Propriété complète + stems' },
+    { type: 'Beat Sur Mesure', price: '150-300€', description: 'Fait sur commande' },
+    { type: 'Mixage & Mastering', price: '50-100€', description: 'Finition professionnelle' },
   ];
 
   const socialLinks = [
@@ -87,8 +87,8 @@ const Contact = () => {
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
+        title: "Informations Manquantes",
+        description: "Merci de remplir tous les champs obligatoires.",
         variant: "destructive"
       });
       return;
@@ -96,8 +96,8 @@ const Contact = () => {
 
     // Simulate form submission
     toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you within 24 hours.",
+      title: "Message Envoyé !",
+      description: "Merci de m'avoir contacté. Je te réponds dans les 24h.",
     });
 
     // Reset form
@@ -123,10 +123,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h1 className="font-metal text-5xl md:text-6xl text-primary text-glow mb-4">
-            Let's Connect
+            Restons Connectés
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to create something dark and powerful? Hit me up for beats, collaborations, or just to talk music.
+            Prêt à créer quelque chose de sombre et puissant ? Contacte-moi pour des beats, des collaborations, ou juste pour parler musique.
           </p>
         </motion.div>
 
@@ -141,13 +141,13 @@ const Contact = () => {
             <Card className="bg-card border-border">
               <CardContent className="p-8">
                 <h2 className="font-metal text-3xl text-primary mb-6">
-                  Send a Message
+                  Envoyer un Message
                 </h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Project Type Selection */}
                   <div>
-                    <Label className="text-foreground mb-3 block">Project Type</Label>
+                    <Label className="text-foreground mb-3 block">Type de Projet</Label>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                       {projectTypes.map((type) => (
                         <Button
@@ -172,13 +172,13 @@ const Contact = () => {
                   {/* Name and Email */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name" className="text-foreground">Name *</Label>
+                      <Label htmlFor="name" className="text-foreground">Nom *</Label>
                       <Input
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="Your name"
+                        placeholder="Ton nom"
                         className="mt-1 bg-input border-border focus:border-primary"
                         required
                       />
@@ -191,7 +191,7 @@ const Contact = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="your@email.com"
+                        placeholder="ton@email.com"
                         className="mt-1 bg-input border-border focus:border-primary"
                         required
                       />
@@ -200,13 +200,13 @@ const Contact = () => {
 
                   {/* Subject */}
                   <div>
-                    <Label htmlFor="subject" className="text-foreground">Subject</Label>
+                    <Label htmlFor="subject" className="text-foreground">Sujet</Label>
                     <Input
                       id="subject"
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      placeholder="What's this about?"
+                      placeholder="De quoi s'agit-il ?"
                       className="mt-1 bg-input border-border focus:border-primary"
                     />
                   </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell me about your project, vision, and what you're looking for..."
+                      placeholder="Parle-moi de ton projet, ta vision et ce que tu recherches..."
                       rows={6}
                       className="mt-1 bg-input border-border focus:border-primary resize-none"
                       required
@@ -233,7 +233,7 @@ const Contact = () => {
                     className="w-full bg-gradient-fire hover:scale-105 transition-transform glow-red"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Send Message
+                    Envoyer le Message
                   </Button>
                 </form>
               </CardContent>
@@ -252,11 +252,11 @@ const Contact = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-6 h-6 text-primary" />
-                  <h3 className="font-metal text-xl text-primary">Response Time</h3>
+                  <h3 className="font-metal text-xl text-primary">Temps de Réponse</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  I typically respond within <span className="text-primary font-semibold">24 hours</span>. 
-                  For urgent projects, feel free to reach out on social media.
+                  Je réponds généralement dans les <span className="text-primary font-semibold">24 heures</span>. 
+                  Pour les projets urgents, n&apos;hésite pas à me contacter sur les réseaux sociaux.
                 </p>
               </CardContent>
             </Card>
@@ -266,7 +266,7 @@ const Contact = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <DollarSign className="w-6 h-6 text-primary" />
-                  <h3 className="font-metal text-xl text-primary">Pricing</h3>
+                  <h3 className="font-metal text-xl text-primary">Tarifs</h3>
                 </div>
                 <div className="space-y-3">
                   {pricingInfo.map((item) => (
@@ -282,7 +282,7 @@ const Contact = () => {
                   ))}
                 </div>
                 <p className="text-xs text-muted-foreground mt-4">
-                  Prices may vary based on complexity and timeline.
+                  Les prix peuvent varier selon la complexité et les délais.
                 </p>
               </CardContent>
             </Card>
@@ -290,7 +290,7 @@ const Contact = () => {
             {/* Social Links */}
             <Card className="bg-card border-border">
               <CardContent className="p-6">
-                <h3 className="font-metal text-xl text-primary mb-4">Follow the Journey</h3>
+                <h3 className="font-metal text-xl text-primary mb-4">Suis le Parcours</h3>
                 <div className="space-y-3">
                   {socialLinks.map((social) => (
                     <a
@@ -322,31 +322,31 @@ const Contact = () => {
           <Card className="bg-card border-border">
             <CardContent className="p-8">
               <h2 className="font-metal text-3xl text-primary text-glow text-center mb-8">
-                Frequently Asked Questions
+                Questions Fréquemment Posées
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">How long does it take to complete a custom beat?</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Combien de temps pour terminer un beat sur mesure ?</h4>
                   <p className="text-muted-foreground text-sm">
-                    Custom beats typically take 3-7 days depending on complexity and current workload.
+                    Les beats sur mesure prennent généralement 3-7 jours selon la complexité et la charge de travail actuelle.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Do you offer revisions?</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Proposes-tu des révisions ?</h4>
                   <p className="text-muted-foreground text-sm">
-                    Yes! I include 2 free revisions with every custom beat to ensure you're 100% satisfied.
+                    Oui ! J&apos;inclus 2 révisions gratuites avec chaque beat sur mesure pour garantir ta satisfaction à 100%.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">What file formats do you provide?</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Quels formats de fichiers fournis-tu ?</h4>
                   <p className="text-muted-foreground text-sm">
-                    All beats come with high-quality MP3 and WAV files. Exclusive purchases include stems.
+                    Tous les beats incluent des fichiers MP3 et WAV haute qualité. Les achats exclusifs incluent les stems.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Can I use your beats for commercial purposes?</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Puis-je utiliser tes beats à des fins commerciales ?</h4>
                   <p className="text-muted-foreground text-sm">
-                    Yes, with the appropriate license. Beat leases allow commercial use with credit.
+                    Oui, avec la licence appropriée. Les licences de beats permettent l&apos;usage commercial avec crédit.
                   </p>
                 </div>
               </div>
